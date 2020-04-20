@@ -1,0 +1,10 @@
+  501  rm server.js 
+  502  mkdir api auth database users
+  503  touch api/server.js auth/auth-router.js auth/authenticator.js
+  504  touch users/users-model.js users/users-router.js
+  505  npm i
+  506  npm i -g knex
+  507  knex init
+  508  knex migrate:make add_user_table
+  509  knex migrate:latest
+  510  history | tail -10 >> commands.txt
